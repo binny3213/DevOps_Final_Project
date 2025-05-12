@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Submission Result</title>
+    <title>Login Result</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body class="container mt-5">
@@ -15,7 +15,7 @@
 %>
         <div class="alert alert-success">
             <h4 class="alert-heading">Login Successful!</h4>
-            <p>Hello, <strong><%= username %></strong>! Your form has been submitted successfully.</p>
+            <p>Hello, <strong><%= username %></strong>! You have logged in successfully.</p>
             <a href="index.jsp" class="btn btn-primary">Back to Home</a>
         </div>
 <%
