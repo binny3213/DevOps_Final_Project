@@ -9,7 +9,7 @@
 
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title text-center">Welcome to My DevOps Application</h2>
+            <h2 class="card-title text-center">Welcome to My DevOps Application - its going to be fun!!</h2>
             
             <form action="submit.jsp" method="post" class="mt-3">
                 <div class="form-group">
