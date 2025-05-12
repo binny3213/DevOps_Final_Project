@@ -7,11 +7,28 @@
 </head>
 <body class="container mt-5">
 
-    <div class="alert alert-success">
-        <h4 class="alert-heading">Submission Successful!</h4>
-        <p>Hello, <strong><%= request.getParameter("username") %></strong>! Your form has been submitted successfully.</p>
-        <a href="index.jsp" class="btn btn-primary">Back to Home</a>
-    </div>
+<%
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+
+    if ("user1".equals(username) && "123".equals(password)) {
+%>
+        <div class="alert alert-success">
+            <h4 class="alert-heading">Login Successful!</h4>
+            <p>Hello, <strong><%= username %></strong>! Your form has been submitted successfully.</p>
+            <a href="index.jsp" class="btn btn-primary">Back to Home</a>
+        </div>
+<%
+    } else {
+%>
+        <div class="alert alert-danger">
+            <h4 class="alert-heading">Login Failed!</h4>
+            <p>Invalid username or password. Please try again.</p>
+            <a href="index.jsp" class="btn btn-primary">Back to Login</a>
+        </div>
+<%
+    }
+%>
 
 </body>
 </html>
