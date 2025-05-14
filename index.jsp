@@ -1,4 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%
+    // Fix 1: Prevent browser caching of the page
+    response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+    response.setHeader("Pragma", "no-cache");
+    response.setDateHeader("Expires", 0);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,27 +36,28 @@
             </div>
 
             <div class="mt-4">
-                <% 
-                    
+                <%
                     String username = request.getParameter("username");
                     String password = request.getParameter("password");
 
-                   
+                    // Fix 2: Add a slight delay before rendering result
                     if (username != null && password != null) {
+                        Thread.sleep(500); // 0.5 second delay
+
                         if ("user1".equals(username) && "123".equals(password)) {
                 %>
                             <div class="alert alert-success">
                                 <h4 class="alert-heading">Login Successful!</h4>
                                 <p>Hello, <strong><%= username %></strong>! You have logged in successfully.</p>
                             </div>
-                <% 
+                <%
                         } else {
                 %>
                             <div class="alert alert-danger">
                                 <h4 class="alert-heading">Login Failed!</h4>
                                 <p>Invalid username or password. Please try again.</p>
                             </div>
-                <% 
+                <%
                         }
                     }
                 %>
