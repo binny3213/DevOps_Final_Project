@@ -53,7 +53,7 @@
                 <%
                         } else {
                 %>
-                            <div class="alert alert-danger">
+                            <div  id="login-result" class="alert alert-danger">
                                 <h4 id="bro" class="alert-heading">Login Failed!</h4>
                                 <p>Invalid username or password. Please try again.</p>
                             </div>
