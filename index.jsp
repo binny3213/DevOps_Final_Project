@@ -24,19 +24,18 @@
                 <button type="submit" class="btn btn-primary">Login</button>
             </form>
 
-            <!-- Link נוסף -->
+            <!-- Link -->
             <div class="mt-4">
                 <a href="https://www.google.com" class="btn btn-link">Visit Google</a>
             </div>
 
-            <!-- אזור ההודעות -->
             <div class="mt-4">
                 <% 
-                    // קבלת הפרמטרים מה-POST
+                    
                     String username = request.getParameter("username");
                     String password = request.getParameter("password");
 
-                    // אם לא ריק, בודקים את הכניסה
+                   
                     if (username != null && password != null) {
                         if ("user1".equals(username) && "123".equals(password)) {
                 %>
