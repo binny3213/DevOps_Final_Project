@@ -15,7 +15,7 @@
 
     <div class="card">
         <div class="card-body">
-            <h2 class="card-title text-center">Welcome to My DevOps Best application in the world!!</h2>
+            <h2 class="card-title text-center">Welcome to My DevOps Best application!!</h2>
 
             <!-- Form Login -->
             <form action="index.jsp" method="post" class="mt-3">
